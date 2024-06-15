@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#page1, #page2, #page3 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#player-info {
+    margin-bottom: 20px;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    color: darkgray;
+}
+
+#controls, #word-input {
+    margin-bottom: 20px;
+}
+
+#word-input input {
+    width: calc(100% - 70px);
+    padding: 5px;
+    font-size: 18px;
+}
+
+#timer, #score {
+    display: block;
+    margin: 10px 0;
+}
+
+#word-list, #final-word-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#word-list th, #word-list td, #final-word-list th, #final-word-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#word-list th, #final-word-list th {
+    background-color: #f2f2f2;
+}
+
+#results {
+    margin-top: 20px;
+}

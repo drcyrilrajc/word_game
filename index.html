@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="page1" class="page">
+        <h1>Word Game</h1>
+        <div id="player-info">
+            <label for="player-name">Name: </label>
+            <input type="text" id="player-name">
+            <label for="country-flag">Country: </label>
+            <select id="country-flag">
+                <!-- Country options with flag emojis will be added here by JavaScript -->
+            </select>
+            <label for="avatar">Avatar: </label>
+            <input type="file" id="avatar" accept="image/*">
+            <button id="start-game-btn">Start Game</button>
+        </div>
+    </div>
+
+    <div id="page2" class="page hidden">
+        <div id="header">
+            <span id="player-display"></span>
+            <span id="country-display"></span>
+        </div>
+        <div id="board">
+            <!-- Game board will be dynamically generated -->
+        </div>
+        <div id="controls">
+            <button id="rotate-btn">Rotate</button>
+            <button id="submit-word-btn">Submit Word</button>
+            <button id="reset-btn">Reset Game</button>
+        </div>
+        <div id="word-input">
+            <input type="text" id="word" placeholder="Enter word here" readonly>
+            <button id="backspace-btn">Backspace</button>
+        </div>
+        <div id="score-board">
+            <span id="timer">Time: 02:00</span>
+            <span id="score">Score: 0</span>
+        </div>
+        <table id="word-list">
+            <thead>
+                <tr>
+                    <th>Word</th>
+                    <th>Score</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Words will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="page3" class="page hidden">
+        <h1>Game Over</h1>
+        <div id="results">
+            <h2>Word List</h2>
+            <table id="final-word-list">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>Valid</th>
+                        <th>Score</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Final word list will be dynamically added here -->
+                </tbody>
+            </table>
+            <h2>Total Score: <span id="total-score"></span></h2>
+            <h2>Rank: <span id="rank"></span></h2>
+            <button id="new-game-btn">New Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
